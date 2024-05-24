@@ -27,13 +27,14 @@ python linear_regression.py
 This will run the main function that includes data loading, preprocessing, model training using the normal equation and gradient descent, and plotting of the cost function over iterations.
 Features
 
-    **Data Loading**: Load a simple predefined dataset.
-    Data Preprocessing: Scale features using StandardScaler and add an intercept term.
-    Model Training: Utilize the normal equation for an analytical solution to the linear regression.
-    Prediction: Predict housing prices based on input features.
-    Cost Computation: Compute the mean squared error and the regression cost.
-    Gradient Descent: An iterative method for optimizing the model's parameters.
-    Visualization: Plot the convergence of the cost function during training.
+- **Data Loading**: Load a simple predefined dataset.
+- **Data Preprocessing**: Scale features using StandardScaler and add an intercept term.
+- **Model Training**: Utilize the normal equation for an analytical solution to the linear regression.
+- **Prediction**: Predict housing prices based on input features.
+- **Cost Computation**: Compute the mean squared error and the regression cost.
+- **Gradient Descent**: An iterative method for optimizing the model's parameters.
+- **Visualization**: Plot the convergence of the cost function during training.
+
 
 ## Functions
 load_data()
