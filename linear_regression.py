@@ -38,3 +38,29 @@ y_train_pred = X @ theta
 # Compute MSE
 mse = mean_squared_error(y, y_train_pred)
 print(f"Mean Squared Error: {mse}")
+
+
+def compute_cost(X, y, theta):
+    m = len(y)
+    predictions = X @ theta
+    cost = (1 / (2 * m)) * np.sum(np.square(predictions - y))
+    return cost
+
+def gradient_descent(X, y, theta, learning_rate, iterations):
+    m = len(y)
+    cost_history = np.zeros(iterations)
+    
+    for i in range(iterations):
+        gradients = (1 / m) * X.T @ (X @ theta - y)
+        theta = theta - learning_rate * gradients
+        cost_history[i] = compute_cost(X, y, theta)
+    
+    return theta, cost_history
+
+# Initialize parameters
+theta = np.zeros((n + 1, 1))
+learning_rate = 0.01
+iterations = 1000
+
+# Perform gradient descent
+theta, cost_history = gradient_descent(X, y, theta, learning_rate, iterations)
