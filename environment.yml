@@ -1,0 +1,9 @@
+name: lrenv
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - numpy
+  - scikit-learn
+  - matplotlib
+prefix: /home/jparep/anaconda3/envs/lrenv
