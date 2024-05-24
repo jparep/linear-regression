@@ -11,15 +11,15 @@ This project demonstrates the application of linear regression to predict housin
 
 ## Setup
 
-To run this project, you need to install the required Python libraries. You can install these packages via pip:
+To run this project, you need to install the required Python libraries. You can install these packages via environment.yml:
 
 ```bash
-pip install numpy matplotlib scikit-learn
+conda install -f environment.yml
 ```
 
 ## Usage
 
-The script can be executed directly if named main.py:
+The script can be executed directly if named linear_regression.py:
 ```bash
 python linear_regression.py
 ```
@@ -39,25 +39,39 @@ Features
 load_data()
 
 Load and return the housing price dataset.
+```bash
 preprocess_data(X)
+```
 
 Scale features and add an intercept term to the dataset.
+```bash
 compute_theta_normal_equation(X, y)
+```
 
 Compute and return the optimal weights using the normal equation.
+```bash
 predict(X, theta)
+```
 
 Make predictions using the learned weights on the input data.
+```bash
 compute_mse(y_true, y_pred)
+```
 
 Compute and return the mean squared error between true and predicted values.
+```bash
 compute_cost(X, y, theta)
+```
 
 Compute the cost for the current set of parameters.
+```bash
 gradient_descent(X, y, theta, learning_rate, iterations)
+```
 
 Perform gradient descent to learn the model parameters, given initial conditions and hyperparameters.
-````plot_cost_history(cost_history, filename)```
+````bash
+plot_cost_history(cost_history, filename)
+```
 
 Plot and save the cost function history to a file.
 
